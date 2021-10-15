@@ -16,6 +16,8 @@ class PurchaseView {
         println(" 2. Update Purchase")
         println(" 3. List All Purchases")
         println(" 4. Search Purchase")
+        println(" 5. Delete Purchase")
+        println(" 6. Load dummy data")
         println("-1. Exit")
         println()
         print("Enter Option : ")

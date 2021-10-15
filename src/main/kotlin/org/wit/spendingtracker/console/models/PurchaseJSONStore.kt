@@ -52,6 +52,11 @@ class PurchaseJSONStore : PurchaseStore {
         serialize()
     }
 
+    override fun delete(purchase: PurchasesModel) {
+        purchases.remove(purchase)
+        serialize()
+    }
+
     internal fun logAll() {
         purchases.forEach { logger.info("${it}") }
     }

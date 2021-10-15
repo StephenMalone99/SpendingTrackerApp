@@ -1,10 +1,5 @@
 [
   {
-    "id": 5683793936375401749,
-    "description": "New top ",
-    "amount": 8
-  },
-  {
     "id": 8735252148849723128,
     "description": "North face hat",
     "amount": 20
@@ -13,10 +8,5 @@
     "id": 4433343172890056982,
     "description": "Adidas Hoodie",
     "amount": 50
-  },
-  {
-    "id": 7585476771191103056,
-    "description": "Nike t-shirt",
-    "amount": 35
   }
 ]

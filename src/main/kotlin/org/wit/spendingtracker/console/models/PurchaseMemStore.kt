@@ -35,6 +35,10 @@ class PurchaseMemStore : PurchaseStore {
             }
         }
 
+        override fun delete(purchase: PurchasesModel) {
+            purchases.remove(purchase)
+        }
+
         internal fun logAll() {
             purchases.forEach { logger.info("${it}") }
         }

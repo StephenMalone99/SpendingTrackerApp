@@ -27,7 +27,8 @@ class PurchaseController {
                 2 -> update()
                 3 -> list()
                 4 -> search()
-                5 -> dummyData()
+                5 -> delete()
+                6 -> dummyData()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
@@ -68,6 +69,20 @@ class PurchaseController {
         }
         else
             println("Purchase Not Updated...")
+    }
+
+    fun delete() {
+        purchaseView.listPurchases(purchases)
+        var searchId = purchaseView.getId()
+        val aPurchase = search(searchId)
+
+        if(aPurchase != null) {
+            purchases.delete(aPurchase)
+            println("Purchase Deleted...")
+            purchaseView.listPurchases(purchases)
+        }
+        else
+            println("Purchase Not Deleted...")
     }
 
     fun search() {
