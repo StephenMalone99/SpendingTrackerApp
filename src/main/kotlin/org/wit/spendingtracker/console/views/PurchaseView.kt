@@ -1,5 +1,6 @@
 package org.wit.spendingtracker.console.views
 
+import org.wit.spendingtracker.console.models.PurchaseJSONStore
 import org.wit.spendingtracker.console.models.PurchaseMemStore
 import org.wit.spendingtracker.console.models.PurchasesModel
 
@@ -26,7 +27,7 @@ class PurchaseView {
         return option
     }
 
-    fun listPurchases(purchases : PurchaseMemStore) {
+    fun listPurchases(purchases : PurchaseJSONStore) {
         println("List All Purchases")
         println()
         purchases.logAll()

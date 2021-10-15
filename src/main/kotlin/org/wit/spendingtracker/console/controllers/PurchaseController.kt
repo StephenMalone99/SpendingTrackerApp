@@ -1,19 +1,20 @@
 package org.wit.spendingtracker.console.controllers
 
 import mu.KotlinLogging
+import org.wit.spendingtracker.console.models.PurchaseJSONStore
 import org.wit.spendingtracker.console.models.PurchaseMemStore
 import org.wit.spendingtracker.console.models.PurchasesModel
 import org.wit.spendingtracker.console.views.PurchaseView
 
 class PurchaseController {
 
-    val purchases = PurchaseMemStore()
     val purchaseView = PurchaseView()
+    val purchases = PurchaseJSONStore()
     val logger = KotlinLogging.logger {}
 
     init {
         logger.info { "Launching Spending Tracker Assignment 1 Console App" }
-        println("Kotlin App Version")
+        println("Spending Tracker Kotlin App")
     }
 
     fun start() {
