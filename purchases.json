@@ -1,12 +1,57 @@
 [
   {
-    "id": 8735252148849723128,
+    "id": 4979671535944184623,
     "description": "North face hat",
-    "amount": 20
+    "amount": "20"
   },
   {
-    "id": 4433343172890056982,
+    "id": -3497791718328764395,
     "description": "Adidas Hoodie",
-    "amount": 50
+    "amount": "50"
+  },
+  {
+    "id": -2584287933457143959,
+    "description": "Nike t-shirt",
+    "amount": "35"
+  },
+  {
+    "id": 1237180336288919270,
+    "description": "North face hat",
+    "amount": "20"
+  },
+  {
+    "id": -6801931823492191073,
+    "description": "Adidas Hoodie",
+    "amount": "50"
+  },
+  {
+    "id": 7186945615644352580,
+    "description": "Nike t-shirt",
+    "amount": "35"
+  },
+  {
+    "id": 7275541256286906263,
+    "description": "StringProperty [bean: tornadofx.ViewModel@3ae2e83d, value: Bow]",
+    "amount": "ObjectProperty [bean: tornadofx.ViewModel@3ae2e83d, value: 21]"
+  },
+  {
+    "id": 8822890555657862991,
+    "description": "StringProperty [bean: tornadofx.ViewModel@3ae2e83d, value: Bow]",
+    "amount": "ObjectProperty [bean: tornadofx.ViewModel@3ae2e83d, value: 33]"
+  },
+  {
+    "id": -3431888727518766974,
+    "description": "StringProperty [bean: tornadofx.ViewModel@3ae2e83d, value: Bow]",
+    "amount": "ObjectProperty [bean: tornadofx.ViewModel@3ae2e83d, value: 34]"
+  },
+  {
+    "id": -1107927046687000073,
+    "description": "StringProperty [bean: tornadofx.ViewModel@3ae2e83d, value: Bow]",
+    "amount": "ObjectProperty [bean: tornadofx.ViewModel@3ae2e83d, value: null]"
+  },
+  {
+    "id": -898103049710707604,
+    "description": "StringProperty [bean: tornadofx.ViewModel@3ae2e83d, value: Bow]",
+    "amount": "ObjectProperty [bean: tornadofx.ViewModel@3ae2e83d, value: null]"
   }
 ]

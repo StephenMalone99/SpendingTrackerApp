@@ -49,7 +49,7 @@ class PurchaseView {
         print("Enter a Description of the Purchase : ")
         purchase.description = readLine()!!
         print("Enter the amount spent : ")
-        purchase.amount = readLine()!!.toInt()
+        purchase.amount = readLine()!!
 
         return purchase.description.isNotEmpty() && purchase.amount.toString().isNotEmpty()
     }
@@ -57,15 +57,15 @@ class PurchaseView {
     fun updatePurchaseData(purchase: PurchasesModel) : Boolean {
 
         var tempDescription: String?
-        var tempAmount: Int?
+        var tempAmount: String?
 
         if (purchase != null) {
             print("Enter a new Description for [ " + purchase.description + " ] : ")
             tempDescription = readLine()!!
             print("Enter a new amount for [ " + purchase.amount + " ] : ")
-            tempAmount = readLine()!!.toInt()
+            tempAmount = readLine()!!
 
-            if (!tempDescription.isNullOrEmpty() && !tempAmount.toString().isNullOrEmpty()) {
+            if (!tempDescription.isNullOrEmpty() && !tempAmount.isNullOrEmpty()) {
                 purchase.description = tempDescription
                 purchase.amount = tempAmount
                 return true
@@ -77,7 +77,7 @@ class PurchaseView {
     fun getId() : Long {
         var strId : String? // String to hold user input
         var searchId : Long // Long to hold converted id
-        print("Enter id to Search/Update : ")
+        print("Enter id to Search/Update or Delete : ")
         strId = readLine()!!
         searchId = if (strId.toLongOrNull() != null && !strId.isEmpty())
             strId.toLong()

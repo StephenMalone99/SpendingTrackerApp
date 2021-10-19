@@ -2,7 +2,6 @@ package org.wit.spendingtracker.console.controllers
 
 import mu.KotlinLogging
 import org.wit.spendingtracker.console.models.PurchaseJSONStore
-import org.wit.spendingtracker.console.models.PurchaseMemStore
 import org.wit.spendingtracker.console.models.PurchasesModel
 import org.wit.spendingtracker.console.views.PurchaseView
 
@@ -97,8 +96,8 @@ class PurchaseController {
     }
 
     fun dummyData() {
-        purchases.create(PurchasesModel(description= "North face hat", amount = 20))
-        purchases.create(PurchasesModel(description= "Adidas Hoodie", amount = 50))
-        purchases.create(PurchasesModel(description= "Nike t-shirt", amount = 35))
+        purchases.create(PurchasesModel(description = "North face hat", amount = "20"))
+        purchases.create(PurchasesModel(description = "Adidas Hoodie", amount = "50"))
+        purchases.create(PurchasesModel(description = "Nike t-shirt", amount = "35"))
     }
 }
