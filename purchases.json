@@ -53,5 +53,10 @@
     "id": -898103049710707604,
     "description": "StringProperty [bean: tornadofx.ViewModel@3ae2e83d, value: Bow]",
     "amount": "ObjectProperty [bean: tornadofx.ViewModel@3ae2e83d, value: null]"
+  },
+  {
+    "id": -48973059803352873,
+    "description": "New Bike",
+    "amount": "20"
   }
 ]

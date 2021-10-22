@@ -15,7 +15,7 @@ val purchaseView = PurchaseView()
 val controller = PurchaseController()
 
 fun main(args: Array<String>) {
-    //controller.start()
-    launch<MainApp>(args)
+    controller.start()
+    //launch<MainApp>(args)
 }
 

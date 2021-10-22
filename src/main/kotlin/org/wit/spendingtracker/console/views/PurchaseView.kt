@@ -1,26 +1,36 @@
 package org.wit.spendingtracker.console.views
 
 import org.wit.spendingtracker.console.models.PurchaseJSONStore
-import org.wit.spendingtracker.console.models.PurchaseMemStore
 import org.wit.spendingtracker.console.models.PurchasesModel
 
+
 class PurchaseView {
+
+    val ANSI_RESET = "\u001B[0m"
+    val ANSI_RED = "\u001B[31m"
+    val ANSI_GREEN = "\u001B[32m"
+    val ANSI_YELLOW = "\u001B[33m"
+    val ANSI_BLUE = "\u001B[34m"
+    val ANSI_PURPLE = "\u001B[35m"
+    val ANSI_CYAN = "\u001B[36m"
+    val ANSI_WHITEBACKGROUND = "\u001B[47m\n"
+
 
     fun menu() : Int {
 
         var option : Int
         var input: String?
 
-        println("MAIN MENU")
-        println(" 1. Add Purchase")
-        println(" 2. Update Purchase")
-        println(" 3. List All Purchases")
-        println(" 4. Search Purchase")
-        println(" 5. Delete Purchase")
-        println(" 6. Load dummy data")
-        println("-1. Exit")
+        println(ANSI_RED + "MAIN MENU" + ANSI_RESET)
+        println(ANSI_GREEN +  " 1. Add Purchase" + ANSI_RESET)
+        println(ANSI_BLUE +   " 2. Update Purchase" + ANSI_RESET)
+        println(ANSI_YELLOW + " 3. List All Purchases" + ANSI_RESET)
+        println(ANSI_PURPLE + " 4. Search Purchase" + ANSI_RESET)
+        println(ANSI_CYAN +   " 5. Delete Purchase" + ANSI_RESET)
+        println(ANSI_BLUE  + " 6. Load dummy data" + ANSI_RESET)
+        println(ANSI_RED +    "-1. Exit" + ANSI_RESET)
         println()
-        print("Enter Option : ")
+        print(ANSI_GREEN + "Enter Option : " + ANSI_RESET)
         input = readLine()!!
         option = if (input.toIntOrNull() != null && !input.isEmpty())
             input.toInt()
@@ -45,13 +55,22 @@ class PurchaseView {
 
     fun addPurchaseData(purchase: PurchasesModel) : Boolean {
 
+        val pattern = "^[0-9]*\$".toRegex()
         println()
         print("Enter a Description of the Purchase : ")
         purchase.description = readLine()!!
         print("Enter the amount spent : ")
         purchase.amount = readLine()!!
 
-        return purchase.description.isNotEmpty() && purchase.amount.toString().isNotEmpty()
+        val string = purchase.amount
+        val string2 = purchase.description
+        var numeric = true
+        numeric = string.matches("^[0-9]*\$".toRegex()) && string2.matches("^[a-zA-Z0-9_ ]*\$".toRegex())
+
+        if (numeric) {
+            return purchase.description.isNotEmpty() && purchase.amount.isNotEmpty()
+        }
+        return false
     }
 
     fun updatePurchaseData(purchase: PurchasesModel) : Boolean {
